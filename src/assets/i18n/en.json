@@ -1,0 +1,97 @@
+{
+    "header": {
+        "title": "HOSPITALS MANAGEMENT SYSTEM"
+    },
+    "Login": {
+        "title": "Login",
+        "Username": "Username",
+        "Enter_Username": "Enter username",
+        "Password": "Password",
+        "Enter_Password": "Enter password"
+    },
+    "sidebar": {
+        "label1": "Welcome to HMS",
+        "label2": "Hospitals management or health care systems management describes the leadership and general management of hospitals, hospital networks.",
+        "label3": "Dashboard"
+    },
+    "Patient_Admission": {
+        "Patient_Admission": "Patient Admission",
+        "Admission_ID": "Admission ID",
+        "Name": "Name",
+        "Admission_Date": "Admission Date",
+        "Admission_Time": "Admission Time",
+        "Gender": "Gender",
+        "Age": "Age",
+        "Address": "Address",
+        "Status": "Status",
+        "Symptoms": "Symptoms",
+        "Phone": "Phone",
+        "Marrital_Status": "Marrital Status",
+        "Occupation": "Occupation",
+        "Doctor": "Doctor",
+        "Bed_Number": "Bed number",
+        "Submit": "Submit"
+    },
+    "Billing_System": {
+        "title": "Billing System",
+        "Get_Details": "Get Details",
+        "Days_till_date": "No. of days till date",
+        "Doctors_Charges": "Doctors Charges",
+        "Room_Charges": "Room Charges",
+        "Hospital_Charges": "Hospital Charges",
+        "Medical_treatment_Charges": "Medical treatment Charges",
+        "Services_Treatment_Charges": "Services Treatment Charges",
+        "Get_Total": "Get Total",
+        "Total_Amount": "Total Amount",
+        "Discount": "Discount",
+        "Paid_Amount": "Paid Amount",
+        "Final_Amount_Total": "Final Amount Total"
+    },
+    "Patient_Discharge": {
+        "title": "Patient's Discharge Update",
+        "Date_Time": "Date & Time",
+        "Payment": "Payment",
+        "Mark_Patient_Discharge": "Mark Patient Discharge"
+    },
+    "Patient_Admission_Database": {
+        "title": "Patient's Admission Database",
+        "Search_name_phone": "Search by name or phone",
+        "Discharge_Date_Time": "Discharge Date & Time",
+        "Print": "Print"
+    },
+    "Patient_Intake_Form": {
+        "title": "Patient Intake Form",
+        "Name": "Name",
+        "First_Name": "First Name",
+        "Last_Name": "Last Name",
+        "Address": "Address",
+        "Street_Address": "Street Address",
+        "City": "City",
+        "State": "State/Province",
+        "Postal_Code": "Postal Code",
+        "Age": "Age",
+        "Sex": "Sex",
+        "Gender": "Gender",
+        "Phone": "Phone",
+        "Amount": "Amount",
+        "Consultant": "Consultant",
+        "Doctor": "Doctor",
+        "Submit": "Submit"
+    },
+    "OP_Database": {
+        "title": "OP Database",
+        "Search_name_phone": "Search by name or phone",
+        "Date_Time": "Date & Time",
+        "Print": "Print",
+        "Token_ID": "Token ID"
+    },
+    "Hospitals_Expenses":{
+        "Hospital_Expenses": "Hospital Expenses",
+        "Expenses_Category": "Expenses Category",
+        "Ownership_Taken": "Ownership Taken By",
+        "Amount": "Amount",
+        "Comments": "Comments",
+        "Add_Expenses": "Add Expenses",
+        "Hospital_Expenses_Database":"Hospital Expenses Database"
+    }
+}

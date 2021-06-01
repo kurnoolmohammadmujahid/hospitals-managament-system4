@@ -1,0 +1,97 @@
+{
+    "header": {
+        "title": "హాస్పిటల్స్ మేనేజ్మెంట్ సిస్టం"
+    },
+    "Login": {
+        "title": "లాగిన్",
+        "Username": "వినియోగదారు పేరు",
+        "Enter_Username": "వినియోగదారు పేరును నమోదు చేయండి",
+        "Password": "పాస్వర్డ్",
+        "Enter_Password": "పాస్వర్డ్ను నమోదు చేయండి"
+    },
+    "sidebar": {
+        "label1": "HMS కు స్వాగతం",
+        "label2": "హాస్పిటల్స్ మేనేజ్‌మెంట్ లేదా హెల్త్ కేర్ సిస్టమ్స్ మేనేజ్‌మెంట్ ఆస్పత్రులు, హాస్పిటల్ నెట్‌వర్క్‌ల నాయకత్వం మరియు సాధారణ నిర్వహణను వివరిస్తుంది.",
+        "label3": "డాష్బోర్డ్"
+    },
+    "Patient_Admission": {
+        "Patient_Admission": "పేషెంట్ అడ్మిషన్",
+        "Admission_ID": "అడ్మిషన్ ఐడి",
+        "Name": "పేరు",
+        "Admission_Date": "ప్రవేశ తేదీ",
+        "Admission_Time": "ప్రవేశ సమయం",
+        "Gender": "లింగం",
+        "Age": "వయస్సు",
+        "Address": "చిరునామా",
+        "Status": "స్థితి",
+        "Symptoms": "లక్షణాలు",
+        "Phone": "ఫోన్",
+        "Marrital_Status": "వైవాహిక స్థితి",
+        "Occupation": "వృత్తి",
+        "Doctor": "డాక్టర్",
+        "Bed_Number": "బెడ్ నంబర్",
+        "Submit": "సమర్పించు"
+    },
+    "Billing_System": {
+        "title": "బిల్లింగ్ సిస్టమ్",
+        "Get_Details": "వివరాలు పొందండి",
+        "Days_till_date": "ఇప్పటి వరకు రోజుల సంఖ్య",
+        "Doctors_Charges": "వైద్యులు ఛార్జీలు",
+        "Room_Charges": "గది ఛార్జీలు",
+        "Hospital_Charges": "హాస్పిటల్ ఛార్జీలు",
+        "Medical_treatment_Charges": "మెడికల్ ట్రీట్మెంట్ ఛార్జీలు",
+        "Services_Treatment_Charges": "సేవల చికిత్స ఛార్జీలు",
+        "Get_Total": "మొత్తాన్ని పొందండి",
+        "Total_Amount": "మొత్తం మొత్తం",
+        "Discount": "డిస్కౌంట్",
+        "Paid_Amount": "చెల్లింపు మొత్తం",
+        "Final_Amount_Total": "తుది మొత్తం మొత్తం"
+    },
+    "Patient_Discharge": {
+        "title": "రోగి యొక్క ఉత్సర్గ నవీకరణ",
+        "Date_Time": "తేదీ & సమయం",
+        "Payment": "చెల్లింపు",
+        "Mark_Patient_Discharge": "రోగి ఉత్సర్గ గుర్తు"
+    },
+    "Patient_Admission_Database": {
+        "title": "రోగి యొక్క ప్రవేశ డేటాబేస్",
+        "Search_name_phone": "పేరు లేదా ఫోన్ ద్వారా శోధించండి",
+        "Discharge_Date_Time": "ఉత్సర్గ తేదీ & సమయం",
+        "Print": "ముద్రణ"
+    },
+    "Patient_Intake_Form": {
+        "title": "రోగి తీసుకోవడం ఫారం",
+        "Name": "పేరు",
+        "First_Name": "మొదటి పేరు",
+        "Last_Name": "చివరి పేరు",
+        "Address": "చిరునామా",
+        "Street_Address": "వీధి చిరునామా",
+        "City": "నగరం",
+        "State": "రాష్ట్రం / ప్రావిన్స్",
+        "Postal_Code": "పోస్టల్ కోడ్",
+        "Age": "వయస్సు",
+        "Sex": "సెక్స్",
+        "Gender": "లింగం",
+        "Phone": "ఫోన్",
+        "Amount": "మొత్తం",
+        "Consultant": "కన్సల్టెంట్",
+        "Doctor": "డాక్టర్",
+        "Submit": "సమర్పించు"
+    },
+    "OP_Database": {
+        "title": "OP డేటాబేస్",
+        "Search_name_phone": "పేరు లేదా ఫోన్ ద్వారా శోధించండి",
+        "Date_Time": "తేదీ & సమయం",
+        "Print": "ముద్రణ",
+        "Token_ID": "టోకెన్ ID"
+    },
+    "Hospitals_Expenses":{
+        "Hospital_Expenses": "Hospital Expenses",
+        "Expenses_Category": "Expenses Category",
+        "Ownership_Taken": "Ownership Taken By",
+        "Amount": "Amount",
+        "Comments": "Comments",
+        "Add_Expenses": "Add Expenses",
+        "Hospital_Expenses_Database":"Hospital Expenses Database"
+    }
+}
