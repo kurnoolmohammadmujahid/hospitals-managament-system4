@@ -1,0 +1,239 @@
+<header>
+    <app-header></app-header>
+</header>
+
+<section>
+    <nav>
+        <app-layout></app-layout>
+    </nav>
+
+    <article>
+        <div class="card card-layout">
+            <div class="card-body card-bg">
+                <h2 class="card-titlev center">{{'Billing_System.title' | translate}}</h2>
+                <form [formGroup]="getpatientDetailsForm" autocomplete="off">
+                    <div class="container fluid">
+                        <div class="row margin-left-22">
+                            <div class="col-md-2">
+                                {{'Patient_Admission.Admission_ID' | translate}}
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group mb-3">
+                                    <input type="text" formControlName="admissionId" class="form-control"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-md-4 center">
+                                <div class="input-group mb-3">
+                                    <button type="button" [disabled]="!getpatientDetailsForm.valid"
+                                        style="width: 15rem;" class="btn btn-success" (click)="getAdmissionData()">
+                                        {{'Billing_System.Get_Details' | translate}}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col center">
+                                <button type="button" [disabled]="!getpatientDetailsForm.valid" style="width: 15rem;"
+                                    class="btn btn-success" (click)="getAdmissionData()">Get Details</button>
+                            </div>
+                        </div> -->
+                    </div>
+                </form>
+                <div *ngIf="errMsg" class="alert alert-danger" role="alert">
+                    <h5 class="alert-heading">No data found</h5>
+                </div>
+                <div *ngIf="display" class="border-ui">
+                    <div class="margin-top-20">
+                        <div class="container fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"> {{'Patient_Admission.Admission_ID' | translate}}
+                                                </th>
+                                                <th scope="col">{{viewMoreDetailsObj.admissionId}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">{{'Patient_Admission.Name' | translate}}</th>
+                                                <th scope="col">{{viewMoreDetailsObj.patientName}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">{{'Patient_Admission.Status' | translate}}</th>
+                                                <th scope="col">{{viewMoreDetailsObj.status}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">{{'Patient_Admission.Doctor' | translate}}</th>
+                                                <th scope="col">{{viewMoreDetailsObj.doctor}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">{{'Patient_Admission.Bed_Number' | translate}}</th>
+                                                <th scope="col">{{viewMoreDetailsObj.bedNumber}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">{{'Patient_Admission.Admission_Date' | translate}}</th>
+                                                <th scope="col">{{viewMoreDetailsObj.admissionDate}}
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">{{'Billing_System.Days_till_date' | translate}}</th>
+                                                <th scope="col">{{days}}
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="col-md-6">
+                                    <form [formGroup]="billingForm" autocomplete="off">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="billing-table" scope="col">
+                                                        {{'Billing_System.Doctors_Charges' | translate}}</th>
+                                                    <th class="billing-table" scope="col">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"
+                                                                    id="basic-addon1">₹</span>
+                                                            </div>
+                                                            <input type="number" formControlName="doctorsCharge"
+                                                                class="form-control width"
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="billing-table" scope="col">
+                                                        {{'Billing_System.Room_Charges' | translate}}</th>
+                                                    <th class="billing-table" scope="col">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"
+                                                                    id="basic-addon1">₹</span>
+                                                            </div>
+                                                            <input type="number" formControlName="roomCharge"
+                                                                class="form-control width"
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="billing-table" scope="col">
+                                                        {{'Billing_System.Hospital_Charges' | translate}}</th>
+                                                    <th class="billing-table" scope="col">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"
+                                                                    id="basic-addon1">₹</span>
+                                                            </div>
+                                                            <input type="number" formControlName="hospitalsCharge"
+                                                                class="form-control width"
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="billing-table" scope="col">
+                                                        {{'Billing_System.Medical_treatment_Charges' | translate}}</th>
+                                                    <th class="billing-table" scope="col">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"
+                                                                    id="basic-addon1">₹</span>
+                                                            </div>
+                                                            <input type="number" formControlName="medicalCharge"
+                                                                class="form-control width"
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="billing-table" scope="col">
+                                                        {{'Billing_System.Services_Treatment_Charges' | translate}}
+                                                    </th>
+                                                    <th class="billing-table" scope="col">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"
+                                                                    id="basic-addon1">₹</span>
+                                                            </div>
+                                                            <input type="number" formControlName="serviceCharge"
+                                                                class="form-control width"
+                                                                aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <div class="row">
+                                            <div class="col center">
+                                                <button type="button" [disabled]="!billingForm.valid"
+                                                    style="width: 15rem;" class="btn btn-success"
+                                                    (click)="calculateTotal()">
+                                                    {{'Billing_System.Get_Total' | translate}}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th class="billing-table" scope="col">{{'Billing_System.Total_Amount' |
+                                                    translate}}</th>
+                                                <th class="billing-table" scope="col">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">₹</span>
+                                                        </div>
+                                                        <input value="{{finalAmount}}" class="form-control width"
+                                                            aria-describedby="basic-addon1" readonly>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="billing-table" scope="col">{{'Billing_System.Discount' |
+                                                    translate}} (%)</th>
+                                                <th class="billing-table" scope="col">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">₹</span>
+                                                        </div>
+                                                        <input type="number" [(ngModel)]="discount"
+                                                            (change)="eventHandler($event)" class="form-control width"
+                                                            aria-describedby="basic-addon1">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="billing-table" scope="col">{{'Billing_System.Paid_Amount' |
+                                                    translate}}</th>
+                                                <th class="billing-table" scope="col">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="basic-addon1">₹</span>
+                                                        </div>
+                                                        <input type="number" [(ngModel)]="paidAmount"
+                                                            class="form-control width" aria-describedby="basic-addon1">
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col center">
+                                            <button type="button" [disabled]="!billingForm.valid" style="width: 15rem;"
+                                                class="btn btn-success" (click)="paidStatus()">
+                                                {{'Billing_System.Final_Amount_Total' | translate}}
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
